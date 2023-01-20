@@ -1,0 +1,17 @@
+{
+  "name": "@ts14311/benchmarks",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build" : "tsc -p tsconfig.build.json",
+    "clean": "rimraf ./build"
+  },
+  "dependencies": {
+    "@ts14311/spam-servers" : "*",
+    "@ts14311/using-netstat" : "*",
+    "@ts14311/using-node-server" : "*"
+  },
+  "devDependencies": {
+  }
+}

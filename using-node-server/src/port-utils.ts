@@ -16,6 +16,7 @@ async function findFreePortInRange(
         server.listen(current, () => resolve(true));
       });
       const { port } = server.address() as net.AddressInfo;
+      server.close()
       return port;
     } catch (err) {
       current++;

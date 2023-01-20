@@ -1,0 +1,14 @@
+{
+  "extends": "./tsconfig.build.json",
+
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@ts14311/spam-servers": ["./spam-servers"],
+      "@ts14311/using-netstat": ["./using-netstat"],
+      "@ts14311/using-node-server": ["./using-node-server"],
+      "@ts14311/benchmarks": ["./benchmarks"]
+    },
+    "noEmit": true
+  }
+}

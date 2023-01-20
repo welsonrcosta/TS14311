@@ -1,16 +1,14 @@
 {
-  "name": "usingNetstat",
+  "name": "@ts14311/spam-servers",
   "version": "1.0.0",
-  "main": "index.js",
   "license": "MIT",
+  "main": "build/index.js",
   "scripts": {
-    "build" : "yarn tsc",
+    "build" : "tsc -p tsconfig.build.json",
     "clean": "rimraf ./build"
   },
   "dependencies": {
-    "typescript": "^4.9.4"
   },
   "devDependencies": {
-    "@types/node": "^18.11.18"
   }
 }

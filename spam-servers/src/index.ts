@@ -1,9 +1,10 @@
 import http from "http";
-const servers = [];
+const servers: Array<http.Server> = [];
 const start = 4000;
 const end = 4499;
 const range = [...Array(1 + end - start).keys()].map((v) => start + v);
-function main() {
+
+function spamServers() {
   console.log(`Trying to spam ${range.length} servers`);
 
   range.forEach((port) => {
@@ -16,4 +17,11 @@ function main() {
   });
 }
 
-main();
+function killServers() {
+  servers.forEach((server) => {
+    server.unref()
+    server.close()
+  })
+}
+
+export { spamServers, killServers}
