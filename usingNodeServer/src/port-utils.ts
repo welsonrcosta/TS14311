@@ -21,7 +21,7 @@ async function findFreePortInRange(
       current++;
     }
   }
-  throw new Error("not found");
+  throw new Error(`No unused ports found in range ${start}-${end}`);
 }
 
 export default findFreePortInRange;
